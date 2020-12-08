@@ -5,5 +5,5 @@ language: cpp
 compiler: gcc
 
 script: 
-    -cmake add_executable(Tutorial main.cpp)
+    -gpp main.cpp
     
