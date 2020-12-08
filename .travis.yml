@@ -6,4 +6,4 @@ compiler: gcc
 
 script: 
     -gpp main.cpp
-    
+    -./main.o
