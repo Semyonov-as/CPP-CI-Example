@@ -2,3 +2,4 @@ language: cpp
 
 script: 
     - cmake CMakeLists.txt
+    - ./main
