@@ -2,4 +2,5 @@ language: cpp
 
 script: 
     - cmake CMakeLists.txt
+    - g++ main.cpp -o main
     - ./main
