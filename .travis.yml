@@ -1,6 +1,25 @@
-language: cpp
+sudo: false
 
-script: 
-    - cmake CMakeLists.txt
-    - g++ main.cpp -o main
-    - ./main
+language:
+  - cpp
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+
+before_install:
+  - pip install --user cpp-coveralls
+
+script:
+  - mkdir build
+  - cd build
+  - cmake ..
+  - cmake --build .
+  - ctest
+
+after_success:
+  - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*"
+
+notifications:
+  email: false
