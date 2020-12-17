@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.5)
 project(enabling_gtest CXX)
 
 # place binaries and libraries according to GNU standards
