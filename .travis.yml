@@ -16,6 +16,7 @@ script:
   - cd build
   - cmake ..
   - cmake --build .
+  - ls
   - ctest
 
 after_success:
